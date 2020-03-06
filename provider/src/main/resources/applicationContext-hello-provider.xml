@@ -14,12 +14,21 @@
 		"
 		>
 
+	<!-- 提供方应用信息，用于计算依赖关系 -->
 	<dubbo:application name="hello-world-app"  />
+
+	<!-- 用Dubbo协议在20880端口暴露服务 -->
 	<dubbo:protocol name="dubbo" port="20880" />
+
+	<!-- 使用zookeeper作为注册中心 -->
+	<dubbo:registry address="zookeeper://localhost:2181"/>
+
+	<!-- 和本地bean一样实现服务 -->
 	<bean id="quickStartService" class="com.zjut.zjxjwxk.dubbo.quickstart.QuickStartServiceImpl"></bean>
+
+	<!-- 声明需要暴露的服务接口 -->
 	<dubbo:service
-			registry="N/A"
 			interface="com.zjut.zjxjwxk.dubbo.ServiceAPI"
 			ref="quickStartService" />
-
+	<!--registry="N/A"-->
 </beans>
