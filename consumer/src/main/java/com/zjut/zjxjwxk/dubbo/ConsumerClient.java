@@ -17,7 +17,9 @@ public class ConsumerClient {
 
             // 获取接口
             ServiceAPI serviceAPI = (ServiceAPI) context.getBean("consumerService");
-            System.out.println(serviceAPI.sendMessage(message));
+            for (int i = 0; i < 10; i++) {
+                System.out.println(serviceAPI.sendMessage(message + i));
+            }
         }
 
     }
