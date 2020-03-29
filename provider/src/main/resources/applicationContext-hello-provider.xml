@@ -28,6 +28,8 @@
 
 	<!-- 声明需要暴露的服务接口 -->
 	<dubbo:service
+			timeout="10000"
+			async="true"
 			interface="com.zjut.zjxjwxk.dubbo.ServiceAPI"
 			ref="quickStartService" />
 	<!--registry="N/A"-->
