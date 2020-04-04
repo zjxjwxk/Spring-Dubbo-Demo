@@ -25,6 +25,7 @@
 			id="consumerService"
 			interface="com.zjut.zjxjwxk.dubbo.ServiceAPI"
 			loadbalance="roundrobin"
+			cache="lru"
 	/>
 	<!--url="dubbo://localhost:20880"-->
 
