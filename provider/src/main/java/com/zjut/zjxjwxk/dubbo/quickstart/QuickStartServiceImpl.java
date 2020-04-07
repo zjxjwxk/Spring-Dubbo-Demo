@@ -2,6 +2,8 @@ package com.zjut.zjxjwxk.dubbo.quickstart;
 
 import com.zjut.zjxjwxk.dubbo.ServiceAPI;
 
+import java.util.List;
+
 public class QuickStartServiceImpl implements ServiceAPI {
 
     public String sendMessage(String message) {
@@ -22,5 +24,9 @@ public class QuickStartServiceImpl implements ServiceAPI {
             e.printStackTrace();
         }
         return "quickstart-provider-message02 = " + message;
+    }
+
+    public List<String> mergerTest(String message) {
+        return null;
     }
 }
