@@ -1,12 +1,9 @@
 package com.zjut.zjxjwxk.dubbo.controller;
 
-import com.alibaba.dubbo.rpc.RpcContext;
 import com.zjut.zjxjwxk.dubbo.ServiceAPI;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Scanner;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
 
 public class ConsumerControllerClient02 {
 
