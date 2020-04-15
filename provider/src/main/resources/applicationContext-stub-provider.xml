@@ -27,8 +27,17 @@
 	<bean id="stubService" class="com.zjut.zjxjwxk.dubbo.stub.StubServiceImpl"></bean>
 
 	<!-- 声明需要暴露的服务接口 -->
+
+	<!--stub-->
+	<!--<dubbo:service-->
+			<!--stub="com.zjut.zjxjwxk.dubbo.MyStub"-->
+			<!--interface="com.zjut.zjxjwxk.dubbo.ServiceAPI"-->
+			<!--ref="stubService" />-->
+
+	<!--mock-->
 	<dubbo:service
 			stub="com.zjut.zjxjwxk.dubbo.MyStub"
+			mock="com.zjut.zjxjwxk.dubbo.MyMock"
 			interface="com.zjut.zjxjwxk.dubbo.ServiceAPI"
 			ref="stubService" />
 </beans>
